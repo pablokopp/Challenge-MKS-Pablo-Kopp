@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Social Dashbord"
+      content="Social dashbord for all your Social Apps"
+    />
+    <!--CDN ChartJs-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.js"
+      integrity="sha512-uLlukEfSLB7gWRBvzpDnLGvzNUluF19IDEdUoyGAtaO0MVSBsQ+g3qhLRL3GTVoEzKpc24rVT6X1Pr5fmsShBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- CSS Sheets-->
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Social Dashbord</title>
+  </head>
+  <body class="body-darktheme">
+    <div class="App">
+      <!-- UPPER SECTION -->
+      <main class="container-uppersection">
+        <header class="container-header">
+          <h1 class="title-h1 title-h1--header">Social Media Dashbord</h1>
+          <h3 class="title-h3 title-h3--header">Total Followers: 23,004</h3>
+          <!-- Switch Theme-->
+          <div class="container-switch">
+            <label for="switch" class="gui-switch">
+              Dark Mode
+              <input type="checkbox" role="switch" id="switch" />
+            </label>
+          </div>
+        </header>
+        <!-- Big Card Container-->
+        <section class="container-bigcards">
+          <!-- Facebook Card-->
+          <article
+            class="container-bigcard--border container-bigcard--borderFacebook"
+          >
+            <div class="container-bigcard">
+              <div class="container-socialtitle">
+                <img
+                  src="./images/icon-facebook.svg"
+                  class="img img-socialtitle"
+                />
+                <h4 class="title-h4 title-h4--socialtitle">@nathanf</h4>
+              </div>
+              <p class="paragraph paragraph-bigcard--number">1987</p>
+              <p class="paragraph paragraph-bigcard--follsubs">FOLLOWERS</p>
+              <div class="container-bigcard--sub">
+                <img
+                  src="./images/icon-up.svg"
+                  class="img img-bigcard--updown"
+                />
+                <p class="paragraph paragraph-bigcard--varup">12 Today</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- instagram Card-->
+          <article
+            class="container-bigcard--border container-bigcard--borderTwitter"
+          >
+            <div class="container-bigcard">
+              <div class="container-socialtitle">
+                <img
+                  src="./images/icon-twitter.svg"
+                  class="img img-socialtitle"
+                />
+                <h4 class="title-h4 title-h4--socialtitle">@nathanf</h4>
+              </div>
+              <p class="paragraph paragraph-bigcard--number">1044</p>
+              <p class="paragraph paragraph-bigcard--follsubs">FOLLOWERS</p>
+              <div class="container-bigcard--sub">
+                <img
+                  src="./images/icon-up.svg"
+                  class="img img-bigcard--updown"
+                />
+                <p class="paragraph paragraph-bigcard--varup">99 Today</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Instagram Card-->
+          <article
+            class="container-bigcard--border container-bigcard--borderInstagram"
+          >
+            <div class="container-bigcard">
+              <div class="container-socialtitle">
+                <img
+                  src="./images/icon-instagram.svg"
+                  class="img img-socialtitle"
+                />
+                <h4 class="title-h4 title-h4--socialtitle">@realnathanf</h4>
+              </div>
+              <p class="paragraph paragraph-bigcard--number">11k</p>
+              <p class="paragraph paragraph-bigcard--follsubs">FOLLOWERS</p>
+              <div class="container-bigcard--sub">
+                <img
+                  src="./images/icon-up.svg"
+                  class="img img-bigcard--updown"
+                />
+                <p class="paragraph paragraph-bigcard--varup">1099 Today</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Youtube Card -->
+          <article
+            class="container-bigcard--border container-bigcard--borderYoutube"
+          >
+            <div class="container-bigcard">
+              <div class="container-socialtitle">
+                <img
+                  src="./images/icon-youtube.svg"
+                  class="img img-socialtitle"
+                />
+                <h4 class="title-h4 title-h4--socialtitle">Nathan F.</h4>
+              </div>
+              <p class="paragraph paragraph-bigcard--number">8239</p>
+              <p class="paragraph paragraph-bigcard--follsubs">SUBSCRIBERS</p>
+              <div class="container-bigcard--sub">
+                <img
+                  src="./images/icon-down.svg"
+                  class="img img-bigcard--updown"
+                />
+                <p class="paragraph paragraph-bigcard--vardown">144 Today</p>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+      <!-- LOWER SECTION -->
+      <section class="container-lowersection">
+        <h2 class="title-h2 title-h2--lowersection">Overview - Today</h2>
+        <!-- MINI CARD CONTAINER-->
+        <div class="container-minicards">
+          <!--MINICARD 1 FB-->
+          <article class="container-minicard">
+            <h4 class="title-h4 title-h4--minicard">Page Views</h4>
+            <img
+              src="./images/icon-facebook.svg"
+              class="img img-minicard--social"
+            />
+            <p class="paragraph paragraph-minicard--number">87</p>
+            <div class="container-minicard--sub">
+              <img
+                src="./images/icon-up.svg"
+                class="img img-minicard--updown"
+              />
+              <p class="paragraph paragraph-minicard--varup">3%</p>
+            </div>
+          </article>
+          <!--MINICARD 2 FB-->
+          <article class="container-minicard">
+            <h4 class="title-h4 title-h4--minicard">Likes</h4>
+            <img
+              src="./images/icon-facebook.svg"
+              class="img img-minicard--social"
+            />
+            <p class="paragraph paragraph-minicard--number">52</p>
+            <div class="container-minicard--sub">
+              <img
+                src="./images/icon-down.svg"
+                class="img img-minicard--updown"
+              />
+              <p class="paragraph paragraph-minicard--vardown">2%</p>
+            </div>
+          </article>
+          <!--MINICARD 3 IG-->
+          <article class="container-minicard">
+            <h4 class="title-h4 title-h4--minicard">Likes</h4>
+            <img
+              src="./images/icon-instagram.svg"
+              class="img img-minicard--social"
+            />
+            <p class="paragraph paragraph-minicard--number">5462</p>
+            <div class="container-minicard--sub">
+              <img
+                src="./images/icon-up.svg"
+                class="img img-minicard--updown"
+              />
+              <p class="paragraph paragraph-minicard--varup">2257%</p>
+            </div>
+          </article>
+          <!--MINICARD 4 IG-->
+          <article class="container-minicard">
+            <h4 class="title-h4 title-h4--minicard">Profile Views</h4>
+            <img
+              src="./images/icon-instagram.svg"
+              class="img img-minicard--social"
+            />
+            <p class="paragraph paragraph-minicard--number">52k</p>
+            <div class="container-minicard--sub">
+              <img
+                src="./images/icon-up.svg"
+                class="img img-minicard--updown"
+              />
+              <p class="paragraph paragraph-minicard--varup">1375%</p>
+            </div>
+          </article>
+          <!--MINICARD 5 TW-->
+          <article class="container-minicard">
+            <h4 class="title-h4 title-h4--minicard">Retweets</h4>
+            <img
+              src="./images/icon-twitter.svg"
+              class="img img-minicard--social"
+            />
+            <p class="paragraph paragraph-minicard--number">117</p>
+            <div class="container-minicard--sub">
+              <img
+                src="./images/icon-up.svg"
+                class="img img-minicard--updown"
+              />
+              <p class="paragraph paragraph-minicard--varup">303%</p>
+            </div>
+          </article>
+          <!--MINICARD 6 TW-->
+          <article class="container-minicard">
+            <h4 class="title-h4 title-h4--minicard">Likes</h4>
+            <img
+              src="./images/icon-twitter.svg"
+              class="img img-minicard--social"
+            />
+            <p class="paragraph paragraph-minicard--number">507</p>
+            <div class="container-minicard--sub">
+              <img
+                src="./images/icon-up.svg"
+                class="img img-minicard--updown"
+              />
+              <p class="paragraph paragraph-minicard--varup">553%</p>
+            </div>
+          </article>
+          <!--MINICARD 7 YT-->
+          <article class="container-minicard">
+            <h4 class="title-h4 title-h4--minicard">Likes</h4>
+            <img
+              src="./images/icon-youtube.svg"
+              class="img img-minicard--social"
+            />
+            <p class="paragraph paragraph-minicard--number">107</p>
+            <div class="container-minicard--sub">
+              <img
+                src="./images/icon-down.svg"
+                class="img img-minicard--updown"
+              />
+              <p class="paragraph paragraph-minicard--vardown">19%</p>
+            </div>
+          </article>
+          <!--MINICARD 8 YT-->
+          <article class="container-minicard">
+            <h4 class="title-h4 title-h4--minicard">Total Views</h4>
+            <img
+              src="./images/icon-youtube.svg"
+              class="img img-minicard--social"
+            />
+            <p class="paragraph paragraph-minicard--number">1407</p>
+            <div class="container-minicard--sub">
+              <img
+                src="./images/icon-down.svg"
+                class="img img-minicard--updown"
+              />
+              <p class="paragraph paragraph-minicard--vardown">12%</p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- MODALS -->
+      <!-- MODAL FB-->
+      <section class="container-graphmodal--outer" id="modal-facebook">
+        <article class="container-graphmodal--inner">
+          <div class="container-graphheader">
+            <h2 class="title-h2 title-h2--graphheader">Facebook followers</h2>
+            <div class="container-socialtitle">
+              <img
+                src="./images/icon-facebook.svg"
+                class="img img-socialtitle"
+              />
+              <h4 class="title-h4 title-h4--socialtitle">@nathanf</h4>
+            </div>
+            <button class="btn btn-graphheader--close" id="btn-close--facebook">
+              ✖
+            </button>
+
+            <!--Graph number var Container-->
+            <div class="container-graphheader--numbvar">
+              <!--graph number var 1 typeA-->
+              <div
+                class="container-graphnumbervar container-graphnumbervar--total"
+              >
+                <div class="container-graphnumbervar--number">
+                  <p class="paragraph paragraph-graphnumbervar--number">1987</p>
+                </div>
+                <p class="paragraph paragraph-graphnumbervar--caption">
+                  Total<br />
+                  followers
+                </p>
+              </div>
+              <!--graph number var 2 typeB-->
+              <div
+                class="
+                  container-graphnumbervar container-graphnumbervar--pastTen
+                "
+              >
+                <div class="container-graphnumbervar--number">
+                  <img
+                    src="./images/icon-up.svg"
+                    class="img img-graphnumbervar"
+                  />
+                  <p class="paragraph paragraph-graphnumbervar--positive">81</p>
+                </div>
+                <p class="paragraph paragraph-graphnumbervar--caption">
+                  New followers in <br />
+                  the past 10 days
+                </p>
+              </div>
+              <!--graph number var 3 typeB-->
+              <div
+                class="
+                  container-graphnumbervar container-graphnumbervar--newtoday
+                "
+              >
+                <div class="container-graphnumbervar--number">
+                  <img
+                    src="./images/icon-up.svg"
+                    class="img img-graphnumbervar"
+                  />
+                  <p class="paragraph paragraph-graphnumbervar--positive">12</p>
+                </div>
+                <p class="paragraph paragraph-graphnumbervar--caption">
+                  New followers <br />
+                  TODAY
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="container-graph">
+            <h4 class="title-h4 title-h4--graph">May 4 - May 13</h4>
+            <div class="graph-view">
+              <canvas id="chart-facebook"></canvas>
+            </div>
+          </div>
+        </article>
+      </section>
+      <!-- MODAL TW-->
+      <section class="container-graphmodal--outer" id="modal-twitter">
+        <article class="container-graphmodal--inner">
+          <div class="container-graphheader">
+            <h2 class="title-h2 title-h2--graphheader">Twitter followers</h2>
+            <div class="container-socialtitle">
+              <img
+                src="./images/icon-twitter.svg"
+                class="img img-socialtitle"
+              />
+              <h4 class="title-h4 title-h4--socialtitle">@nathanf</h4>
+            </div>
+            <button class="btn btn-graphheader--close" id="btn-close--twitter">
+              ✖
+            </button>
+
+            <!--Graph number var Container-->
+            <div class="container-graphheader--numbvar">
+              <!--graph number var 1 typeA-->
+              <div
+                class="container-graphnumbervar container-graphnumbervar--total"
+              >
+                <div class="container-graphnumbervar--number">
+                  <p class="paragraph paragraph-graphnumbervar--number">1987</p>
+                </div>
+                <p class="paragraph paragraph-graphnumbervar--caption">
+                  Total<br />
+                  followers
+                </p>
+              </div>
+              <!--graph number var 2 typeB-->
+              <div
+                class="
+                  container-graphnumbervar container-graphnumbervar--pastTen
+                "
+              >
+                <div class="container-graphnumbervar--number">
+                  <img
+                    src="./images/icon-up.svg"
+                    class="img img-graphnumbervar"
+                  />
+                  <p class="paragraph paragraph-graphnumbervar--positive">81</p>
+                </div>
+                <p class="paragraph paragraph-graphnumbervar--caption">
+                  New followers in <br />
+                  the past 10 days
+                </p>
+              </div>
+              <!--graph number var 3 typeB-->
+              <div
+                class="
+                  container-graphnumbervar container-graphnumbervar--newtoday
+                "
+              >
+                <div class="container-graphnumbervar--number">
+                  <img
+                    src="./images/icon-up.svg"
+                    class="img img-graphnumbervar"
+                  />
+                  <p class="paragraph paragraph-graphnumbervar--positive">12</p>
+                </div>
+                <p class="paragraph paragraph-graphnumbervar--caption">
+                  New followers <br />
+                  TODAY
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="container-graph">
+            <h4 class="title-h4 title-h4--graph">May 4 - May 13</h4>
+            <div class="graph-view">
+              <canvas id="chart-twitter"></canvas>
+            </div>
+          </div>
+        </article>
+      </section>
+      <!-- MODAL IG-->
+      <section class="container-graphmodal--outer" id="modal-instagram">
+        <article class="container-graphmodal--inner">
+          <div class="container-graphheader">
+            <h2 class="title-h2 title-h2--graphheader">Instagram followers</h2>
+            <div class="container-socialtitle">
+              <img
+                src="./images/icon-instagram.svg"
+                class="img img-socialtitle"
+              />
+              <h4 class="title-h4 title-h4--socialtitle">@realnathanf</h4>
+            </div>
+            <button
+              class="btn btn-graphheader--close"
+              id="btn-close--instagram"
+            >
+              ✖
+            </button>
+
+            <!--Graph number var Container-->
+            <div class="container-graphheader--numbvar">
+              <!--graph number var 1 typeA-->
+              <div
+                class="container-graphnumbervar container-graphnumbervar--total"
+              >
+                <div class="container-graphnumbervar--number">
+                  <p class="paragraph paragraph-graphnumbervar--number">1987</p>
+                </div>
+                <p class="paragraph paragraph-graphnumbervar--caption">
+                  Total<br />
+                  followers
+                </p>
+              </div>
+              <!--graph number var 2 typeB-->
+              <div
+                class="
+                  container-graphnumbervar container-graphnumbervar--pastTen
+                "
+              >
+                <div class="container-graphnumbervar--number">
+                  <img
+                    src="./images/icon-up.svg"
+                    class="img img-graphnumbervar"
+                  />
+                  <p class="paragraph paragraph-graphnumbervar--positive">81</p>
+                </div>
+                <p class="paragraph paragraph-graphnumbervar--caption">
+                  New followers in <br />
+                  the past 10 days
+                </p>
+              </div>
+              <!--graph number var 3 typeB-->
+              <div
+                class="
+                  container-graphnumbervar container-graphnumbervar--newtoday
+                "
+              >
+                <div class="container-graphnumbervar--number">
+                  <img
+                    src="./images/icon-up.svg"
+                    class="img img-graphnumbervar"
+                  />
+                  <p class="paragraph paragraph-graphnumbervar--positive">12</p>
+                </div>
+                <p class="paragraph paragraph-graphnumbervar--caption">
+                  New followers <br />
+                  TODAY
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="container-graph">
+            <h4 class="title-h4 title-h4--graph">May 4 - May 13</h4>
+            <div class="graph-view">
+              <canvas id="chart-instagram"></canvas>
+            </div>
+          </div>
+        </article>
+      </section>
+      <!-- MODAL YT-->
+      <section class="container-graphmodal--outer" id="modal-youtube">
+        <article class="container-graphmodal--inner">
+          <div class="container-graphheader">
+            <h2 class="title-h2 title-h2--graphheader">Youtube followers</h2>
+            <div class="container-socialtitle">
+              <img
+                src="./images/icon-youtube.svg"
+                class="img img-socialtitle"
+              />
+              <h4 class="title-h4 title-h4--socialtitle">Nathan F.</h4>
+            </div>
+            <button class="btn btn-graphheader--close" id="btn-close--youtube">
+              ✖
+            </button>
+
+            <!--Graph number var Container-->
+            <div class="container-graphheader--numbvar">
+              <!--graph number var 1 typeA-->
+              <div
+                class="container-graphnumbervar container-graphnumbervar--total"
+              >
+                <div class="container-graphnumbervar--number">
+                  <p class="paragraph paragraph-graphnumbervar--number">1987</p>
+                </div>
+                <p class="paragraph paragraph-graphnumbervar--caption">
+                  Total<br />
+                  followers
+                </p>
+              </div>
+              <!--graph number var 2 typeB-->
+              <div
+                class="
+                  container-graphnumbervar container-graphnumbervar--pastTen
+                "
+              >
+                <div class="container-graphnumbervar--number">
+                  <img
+                    src="./images/icon-down.svg"
+                    class="img img-graphnumbervar"
+                  />
+                  <p class="paragraph paragraph-graphnumbervar--negative">
+                    788
+                  </p>
+                </div>
+                <p class="paragraph paragraph-graphnumbervar--caption">
+                  New followers in <br />
+                  the past 10 days
+                </p>
+              </div>
+              <!--graph number var 3 typeB-->
+              <div
+                class="
+                  container-graphnumbervar container-graphnumbervar--newtoday
+                "
+              >
+                <div class="container-graphnumbervar--number">
+                  <img
+                    src="./images/icon-down.svg"
+                    class="img img-graphnumbervar"
+                  />
+                  <p class="paragraph paragraph-graphnumbervar--negative">
+                    144
+                  </p>
+                </div>
+                <p class="paragraph paragraph-graphnumbervar--caption">
+                  New followers <br />
+                  TODAY
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="container-graph">
+            <h4 class="title-h4 title-h4--graph">May 4 - May 13</h4>
+            <div class="graph-view">
+              <canvas id="chart-youtube"></canvas>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+    <!-- SCRIPTS -->
+    <script src="./scripts/onClickModal.js"></script>
+    <script src="./scripts/chartGenerator.js"></script>
+    <script src="./scripts/changeTheme.js"></script>
+  </body>
+</html>

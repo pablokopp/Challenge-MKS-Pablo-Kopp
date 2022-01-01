@@ -1,0 +1,640 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+:root {
+  /*font-size*/
+  /*font-weight*/
+  --font-w-1: 400;
+  --font-w-2: 700;
+
+  /*colors*/
+
+  --clr-positive: hsl(163, 72%, 41%);
+  --clr-negative: hsl(356, 69%, 56%);
+
+  --clr-social-tw: hsl(195, 100%, 50%);
+  --clr-social-fb: hsl(203, 89%, 53%);
+  --clr-social-ig: linear-gradient(
+    90deg,
+    rgba(199, 183, 158, 1) 0%,
+    rgba(223, 73, 150, 1) 100%
+  );
+  --clr-social-yt: hsl(348, 97%, 39%);
+}
+.body-darktheme {
+  /* VARIABLES DARK THEME */
+
+  /*BG colors */
+  --clr-bg-1: hsl(230, 17%, 14%);
+  --clr-bg-2: hsl(232, 19%, 15%);
+  --clr-bg-3: hsl(228, 28%, 20%);
+
+  --clr-bg-3-hover: #333a56;
+
+  /*TEXT COLOR*/
+  --clr-text-1: hsl(228, 34%, 66%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-chart: hsl(243, 51%, 70%);
+  /*SWITCH COLOR*/
+  --track-inactive: linear-gradient(
+    90deg,
+    rgba(55, 143, 230, 1) 0%,
+    rgba(62, 218, 130, 1) 100%
+  );
+  --track-active: rgba(255, 255, 255, 0.178);
+}
+.body-lighttheme {
+  /* VARIABLES DARK THEME */
+
+  /*BG colors */
+  --clr-bg-1: hsl(255, 15%, 98%);
+  --clr-bg-2: hsl(0, 0%, 100%);
+  --clr-bg-3: hsl(255, 20%, 95%);
+
+  --clr-bg-3-hover: hsl(255, 30%, 90%);
+
+  /*TEXT COLOR*/
+  --clr-text-1: hsl(228, 12%, 43%);
+  --clr-white: hsl(255, 50%, 5%);
+  --clr-chart: hsl(243, 51%, 70%);
+
+  /*SWITCH COLOR*/
+
+  --track-active: rgba(7, 52, 255, 0.178);
+}
+body {
+  margin: 0;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  background-color: var(--clr-bg-2);
+}
+body::before {
+  content: "";
+  background-color: var(--clr-bg-1);
+  width: 100%;
+  height: 18.5rem;
+  border-radius: 0 0 15px 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+/* General App styles */
+.App {
+  padding: 0 10%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.btn {
+  font-size: 1.2rem;
+  background: transparent;
+  color: var(--clr-white);
+  border: none;
+  cursor: pointer;
+}
+
+/* Upper Section */
+/* header*/
+.container-header {
+  padding-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "h1 "
+    "h3 "
+    "switch";
+  gap: 1rem;
+}
+
+@media (min-width: 1000px) {
+  .container-header {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "h1 switch"
+      "h3 .";
+  }
+}
+
+.title-h1--header {
+  grid-area: h1;
+  justify-self: start;
+  align-self: center;
+  margin: 0;
+  font-size: 2rem;
+  color: var(--clr-white);
+}
+
+.title-h3--header {
+  grid-area: h3;
+  justify-self: start;
+  align-self: start;
+  font-size: 1rem;
+
+  margin: 0;
+
+  color: var(--clr-text-1);
+}
+/* Switch theme */
+@media (max-width: 1000px) {
+  .container-switch::before {
+    content: "";
+    display: block;
+
+    height: 1px;
+    width: 100%;
+    margin: 1rem 0;
+    background-color: var(--clr-text-1);
+  }
+}
+
+.gui-switch {
+  /*text*/
+  color: var(--clr-text-1);
+  font-weight: var(--font-w-2);
+  /*PADDING*/
+  --track-size: calc(var(--thumb-size) * 2);
+  --track-padding: 3px;
+  /*COLORS*/
+
+  --track-color-inactive: var(--track-inactive);
+  --track-color-active: var(--track-active);
+  /*SIZES*/
+  --thumb-size: 1.5rem;
+  --thumb: var(--clr-bg-2);
+  --thumb-highlight: hsl(0 0% 0% / 25%);
+
+  --thumb-color: var(--thumb);
+  --thumb-color-highlight: var(--clr-bg-3-hover);
+  /*FLEXBOX - layaout of the switch at its top lvl*/
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /*touch interaction style*/
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.gui-switch:hover {
+  color: var(--clr-white);
+}
+/*INPUT STYLE, I take is default appearence and then style it to look like a switch*/
+.gui-switch > input {
+  appearance: none;
+  border: none;
+  outline-offset: 5px;
+  box-sizing: content-box;
+
+  inline-size: var(--track-size);
+  block-size: var(--thumb-size);
+  border-radius: var(--track-size);
+
+  padding: var(--track-padding);
+
+  background: var(--track-inactive);
+  cursor: pointer;
+
+  flex-shrink: 0;
+  display: grid;
+  align-items: center;
+  grid: [track] 1fr / [track] 1fr;
+
+  /*The track also creates a one by one single cell grid track area for a thumb to claim.*/
+
+  /*THUMB POSITIONING*/
+  --thumb-position: 0%;
+}
+/*THUMB - stacks on top of the track instead of below it by claiming the grid area track*/
+.gui-switch > input::before {
+  content: "";
+  grid-area: track;
+  inline-size: var(--thumb-size);
+  block-size: var(--thumb-size);
+
+  /*THUMB STYLE*/
+  background: var(--thumb-color);
+  border-radius: 50%;
+
+  /* INTERACTION STYLES */
+  box-shadow: 0 0 0 var(--highlight-size) var(--thumb-color-highlight);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  /*THUMB POSITIONING*/
+  transform: translateX(var(--thumb-position));
+}
+/*THUMB POSITIONING WHEN CHECKED*/
+.gui-switch > input:checked {
+  --thumb-position: calc(var(--track-size) - 100%);
+  /*style when checked*/
+  background: var(--track-color-active);
+}
+
+/* Big Card Container */
+
+.container-bigcards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 3rem 0 3rem;
+}
+@media (min-width: 680px) {
+  .container-bigcards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1000px) {
+  .container-bigcards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Big Cards */
+/*outer border */
+.container-bigcard--border {
+  border-radius: 10px 10px 15px 15px;
+  padding-top: 5px;
+  width: 100%;
+}
+.container-bigcard--border:first-child {
+  margin-left: 0;
+}
+.container-bigcard--border:last-child {
+  margin-right: 0;
+}
+.container-bigcard--borderFacebook {
+  background-color: var(--clr-social-fb);
+}
+.container-bigcard--borderTwitter {
+  background-color: var(--clr-social-tw);
+}
+.container-bigcard--borderInstagram {
+  background: rgb(199, 183, 158);
+  background: linear-gradient(
+    90deg,
+    rgba(199, 183, 158, 1) 0%,
+    rgba(223, 73, 150, 1) 50%
+  );
+}
+.container-bigcard--borderYoutube {
+  background-color: var(--clr-social-yt);
+}
+
+/*inner content*/
+.container-bigcard {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  background-color: var(--clr-bg-3);
+  border-radius: 0 0 10px 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.container-bigcard:hover {
+  background-color: var(--clr-bg-3-hover);
+}
+.container-bigcard > * {
+  margin: 0;
+}
+.container-bigcard--sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paragraph-bigcard--number {
+  color: var(--clr-white);
+  font-size: 3.5rem;
+  font-weight: var(--font-w-2);
+}
+
+.paragraph-bigcard--follsubs {
+  margin-bottom: 0.5rem;
+  letter-spacing: 4px;
+  color: var(--clr-text-1);
+}
+.paragraph-bigcard--varup,
+.paragraph-bigcard--vardown {
+  margin-left: 0.3rem;
+  font-weight: var(--font-w-2);
+}
+
+.paragraph-bigcard--varup {
+  color: var(--clr-positive);
+}
+.paragraph-bigcard--vardown {
+  color: var(--clr-negative);
+}
+/*social title */
+.container-socialtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-h4--socialtitle {
+  margin-left: 0.5rem;
+  font-size: 14px;
+  color: var(--clr-text-1);
+}
+
+/*lOWER SECTION */
+.title-h2--lowersection {
+  color: var(--clr-white);
+  margin: 4rem 0 1rem;
+  text-align: left;
+}
+/*MINI CARD CONTAINER*/
+
+.container-minicards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 2rem 0 3rem;
+}
+@media (min-width: 680px) {
+  .container-minicards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .container-minicards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*MINI CARD*/
+.container-minicard {
+  display: grid;
+  grid-template-columns: 1.5rem 1fr auto 1.5rem;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    ". h4 social ."
+    ". number delta .";
+
+  width: 100%;
+  padding: 1.5rem 0;
+  border-radius: 10px;
+  background-color: var(--clr-bg-3);
+  cursor: pointer;
+
+  transition: all 0.2s ease-in-out;
+}
+.container-minicard:hover {
+  background-color: var(--clr-bg-3-hover);
+}
+.container-minicard > * {
+  margin: 0;
+}
+.container-minicard:nth-child(4),
+.container-minicard:last-child {
+  margin-right: 0;
+}
+
+.container-minicard--sub {
+  display: flex;
+  grid-area: delta;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  align-self: flex-end;
+}
+.container-minicard--sub > * {
+  margin: 0;
+}
+.paragraph-minicard--varup,
+.paragraph-minicard--vardown {
+  margin-left: 0.3rem;
+  margin-bottom: 0.3rem;
+  font-size: 0.875rem;
+
+  font-weight: var(--font-w-2);
+}
+.paragraph-minicard--varup {
+  color: var(--clr-positive);
+}
+.paragraph-minicard--vardown {
+  color: var(--clr-negative);
+}
+.title-h4--minicard {
+  grid-area: h4;
+  font-size: 0.875rem;
+  justify-self: start;
+  align-items: center;
+  color: var(--clr-text-1);
+}
+.img-minicard--social {
+  grid-area: social;
+  justify-self: end;
+  align-self: center;
+}
+.paragraph-minicard--number {
+  grid-area: number;
+  justify-self: start;
+  align-self: center;
+  margin-top: 2rem;
+  color: var(--clr-white);
+  font-weight: var(--font-w-2);
+  font-size: 2rem;
+}
+
+/*MODAL STYLES*/
+/*mobile Modal*/
+
+/*General Modal*/
+.container-graphmodal--outer {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  /* overflow: auto; */
+  background-color: hsla(0, 0%, 0%, 0.5);
+}
+.modal-active {
+  display: flex;
+}
+.container-graphmodal--inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 69%;
+  position: relative;
+
+  background-color: var(--clr-bg-3);
+  border-radius: 20px;
+
+  padding: 1em;
+}
+@media (min-width: 660px) {
+  .container-graphmodal--inner {
+    padding: 0 3rem 0 3em;
+  }
+}
+/*GRAPH HEADER*/
+.container-graphheader {
+  display: grid;
+  /* ver tamanio final de esa column */
+  width: 100%;
+  grid-template-columns: 1fr;
+  column-gap: 0;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "btn"
+    "h2"
+    "social"
+    "numbervar";
+  padding: 1em 2em 0 2em;
+  font-size: 10px;
+}
+
+@media (min-width: 660px) {
+  .container-graphheader {
+    grid-template-columns: 1fr 2em;
+    column-gap: 2em;
+    grid-template-areas:
+      ". btn"
+      "h2 ."
+      "social ."
+      "numbervar .";
+    padding: 1em 2em 0 4em;
+  }
+}
+@media (min-width: 1261px) {
+  .container-graphheader {
+    font-size: 16px;
+  }
+}
+.container-graphheader > * {
+  margin: 0;
+}
+.title-h2--graphheader {
+  grid-area: h2;
+  justify-self: center;
+  align-self: center;
+  color: var(--clr-white);
+  font-weight: var(--font-w-2);
+  font-size: 2.5em;
+}
+@media (min-width: 660px) {
+  .title-h2--graphheader {
+    font-size: 2.5em;
+    justify-self: start;
+  }
+}
+.container-graphheader .container-socialtitle {
+  grid-area: social;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  align-content: flex-start;
+}
+
+@media (min-width: 660px) {
+  .container-graphheader .container-socialtitle {
+    justify-self: start;
+  }
+}
+
+.container-graphheader .title-h4--socialtitle {
+  font-size: 1.3em;
+}
+.container-graphheader .img-socialtitle {
+  width: 30px;
+}
+.btn-graphheader--close {
+  display: flex;
+  justify-content: flex-end;
+  grid-area: btn;
+}
+
+.container-graphheader--numbvar {
+  grid-area: numbervar;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+  flex-wrap: nowrap;
+}
+@media (min-width: 660px) {
+  .container-graphheader--numbvar {
+    flex-direction: row;
+    justify-self: start;
+    flex-wrap: wrap;
+  }
+}
+
+/*GRAPH NUMBER VAR */
+.container-graphnumbervar {
+  margin-right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--clr-white);
+}
+
+@media (min-width: 660px) {
+  .container-graphnumbervar {
+    margin-right: 4em;
+  }
+}
+
+.container-graphnumbervar--number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.paragraph-graphnumbervar--positive,
+.paragraph-graphnumbervar--negative,
+.paragraph-graphnumbervar--number {
+  font-size: 3em;
+  font-weight: var(--font-w-2);
+  margin: 1rem 1rem 1rem 0;
+}
+.paragraph-graphnumbervar--positive {
+  color: var(--clr-positive);
+}
+.paragraph-graphnumbervar--negative {
+  color: var(--clr-negative);
+}
+.img-graphnumbervar {
+  height: 0.4rem;
+  width: 0.8rem;
+  margin-right: 0.5rem;
+}
+.paragraph-graphnumbervar--caption {
+  text-align: left;
+}
+
+/*CHART STYLES */
+/* GRAPH CONTAINER */
+.container-graph {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--clr-bg-2);
+  padding: 0 3rem 1rem 3rem;
+  border-radius: 20px;
+}
+@media (min-width: 660px) {
+  .container-graph {
+    display: flex;
+  }
+}
+.title-h4--graph {
+  color: #9299b6;
+  font-weight: var(--font-w-1);
+  text-align: left;
+}
+.graph-view {
+  position: relative;
+  width: 100%;
+  height: 20%;
+}
