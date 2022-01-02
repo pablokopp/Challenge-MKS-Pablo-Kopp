@@ -20,6 +20,11 @@
   );
   --clr-social-yt: hsl(348, 97%, 39%);
 }
+
+/* For the different theme styling I decided the best choice was to store all the colors in different variables and giving the body Tag a different class depending on wich theme you are using.
+This way i can update the variable stored values in each class, and since im using them trough all my styling, the changes on that class will be updated through the app.
+Also, this makes possible to easily create more theme options by repeating the same process */
+
 .body-darktheme {
   /* VARIABLES DARK THEME */
 
