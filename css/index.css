@@ -120,7 +120,7 @@ body::before {
 
 .title-h1--header {
   grid-area: h1;
-  justify-self: start;
+  justify-self: center;
   align-self: center;
   margin: 0;
   font-size: 2rem;
@@ -129,13 +129,20 @@ body::before {
 
 .title-h3--header {
   grid-area: h3;
-  justify-self: start;
+  justify-self: center;
   align-self: start;
   font-size: 1rem;
 
   margin: 0;
 
   color: var(--clr-text-1);
+}
+
+@media (min-width: 660px) {
+  .title-h1--header,
+  .title-h3--header {
+    justify-self: start;
+  }
 }
 /* Switch theme */
 @media (max-width: 1000px) {
@@ -492,7 +499,7 @@ body::before {
     "social"
     "numbervar";
   padding: 1em 2em 0 2em;
-  font-size: 10px;
+  font-size: 14px;
 }
 
 @media (min-width: 660px) {
@@ -522,11 +529,13 @@ body::before {
   color: var(--clr-white);
   font-weight: var(--font-w-2);
   font-size: 2.5em;
+  text-transform: capitalize;
 }
 @media (min-width: 660px) {
   .title-h2--graphheader {
     font-size: 2.5em;
     justify-self: start;
+    text-transform: none;
   }
 }
 .container-graphheader .container-socialtitle {
@@ -553,6 +562,9 @@ body::before {
   display: flex;
   justify-content: flex-end;
   grid-area: btn;
+  position: relative;
+  bottom: 15px;
+  left: 10px;
 }
 
 .container-graphheader--numbvar {
@@ -568,6 +580,10 @@ body::before {
     flex-direction: row;
     justify-self: start;
     flex-wrap: wrap;
+  }
+  .btn-graphheader--close {
+    left: 20px;
+    bottom: 0px;
   }
 }
 
